@@ -1,6 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    margin: 0 auto;
+}
+
 .container {
-    width: 1024px;
-    height: 600px;
+    max-width: 1024px;
     background-color: black;
-    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+}
+
+
+.slider {
+    position: relative;
+    max-width: 904px;
+    overflow: hidden;
+    margin:60px;
+    border-radius: 25px;
+}
+
+.container-images {
+   display: flex;
+   align-items: center;
+   transition: all 2s;
+   gap: 30px;
+
+}
+
+.container-images img {
+    max-width: 100%;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 60px;
+}
+
+
+.name-step {
+    display: flex;
+    color: white;
+    font-size: 16px;
+}
+
+.dots-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dots-squad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dots-group .dots-squad:last-child {
+    margin-right: 0;
+}
+
+.dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(33, 80, 236);
+
+}
+
+.dots.active {
+    border: 3px solid rgb(33, 80, 236);
+    background-color: black;
+    
 }
