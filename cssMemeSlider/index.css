@@ -35,6 +35,19 @@
     max-width: 100%;
 }
 
+.image-wrapper {
+    display: flex;
+    gap: 50px;
+    transition: transform 1s ease-in-out; 
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
 
 .info {
     display: flex;
@@ -68,6 +81,7 @@
     margin-right: 10px;
 }
 
+
 .dots-group .dots-squad:last-child {
     margin-right: 0;
 }
@@ -80,8 +94,16 @@
 
 }
 
+.dots:hover {
+    background-color: white;
+}
+
+
 .dots.active {
     border: 3px solid rgb(33, 80, 236);
     background-color: black;
     
 }
+
+
+
