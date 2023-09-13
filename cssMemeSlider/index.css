@@ -7,8 +7,8 @@
 }
 
 .container {
-    max-width: 1024px;
-    background-color: black;
+    width: 100%;
+    background-color: rgb(22, 18, 18);
     overflow: hidden;
     position: static;
     border-radius: 25px;
@@ -17,18 +17,15 @@
 
 .slider {
     position: static;
-    max-width: 904px;
     overflow: hidden;
-    margin:60px;
+    margin: 4vw;
     border-radius: 25px;
 }
 
 .container-images {
-   display: flex;
-   align-items: center;
-   transition: all 2s;
-   gap: 30px;
-
+    display: flex;
+    align-items: center;
+    transition: all 2s;
 }
 
 .container-images img {
@@ -37,8 +34,7 @@
 
 .image-wrapper {
     display: flex;
-    gap: 50px;
-    transition: transform 1s ease; 
+    transition: transform 1s ease;
 }
 
 .image {
@@ -46,7 +42,7 @@
     height: auto;
     border-radius: 25px;
     opacity: 0;
-    transition: opacity 1s ease; 
+    transition: opacity 1s ease;
 }
 
 .info {
@@ -54,7 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 60px;
+    margin: 4vw;
 }
 
 
@@ -62,7 +58,7 @@
     display: flex;
     align-items: center;
     transition: all 2s;
-    
+
 }
 
 
@@ -70,13 +66,12 @@
     display: flex;
     color: white;
     font-size: 16px;
-    gap: 10px;
 }
 
 
 .step {
     display: none;
-    animation: fade-out 0.5s ease-in-out; 
+    animation: fade-out 0.5s ease-in-out;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -84,7 +79,7 @@
 
 .step.active {
     display: flex;
-    animation: fade-in 0.5s ease-in-out; 
+    animation: fade-in 0.5s ease-in-out;
     opacity: 1;
 }
 
@@ -103,7 +98,6 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 
@@ -115,19 +109,19 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgb(33, 80, 236);
+    background-color: rgb(30, 221, 212);
 
 }
 
-.dots:hover {
-    background-color: white;
+.dots-squad:hover .dots {
+  background-color: rgb(217, 240, 12);
 }
 
 
 .dots.active {
-    border: 3px solid rgb(33, 80, 236);
-    background-color: black;
-    
+    border: 3px solid   rgb(30, 221, 212);
+    background-color: rgb(184, 28, 61);
+
 }
 
 
@@ -136,6 +130,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -145,6 +140,7 @@
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }

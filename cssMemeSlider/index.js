@@ -19,7 +19,7 @@ function showImage(index) {
     setTimeout(() => {
         STEP[index].classList.add('active');
     }, 0);
-    IMAGE_WRAPPER.style.transform = `translateX(-${index * 904}px)`;
+    IMAGE_WRAPPER.style.transform = `translateX(-${index * 100}%)`;
    
 }
 
