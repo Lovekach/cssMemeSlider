@@ -7,49 +7,40 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: rgb(22, 18, 18);
     overflow: hidden;
-    position: static;
-    border-radius: 25px;
+    border-radius: 3vw;
+    border: .3rem solid #b11b1b;
 }
 
-
-.slider {
-    position: static;
-    overflow: hidden;
-    margin: 4vw;
-    border-radius: 25px;
-}
-
-.container-images {
-    display: flex;
-    align-items: center;
-    transition: all 2s;
-}
-
-.container-images img {
+.container img {
     max-width: 100%;
 }
 
 .image-wrapper {
     display: flex;
-    transition: transform 1s ease;
+    overflow: hidden;
+    margin: 4vw;
+    border-radius: 3vw;
+    border: .2rem solid #b11b1b;
+}
+
+.container input {
+    display: none;
 }
 
 .image {
     width: 100%;
     height: auto;
-    border-radius: 25px;
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
 .info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     margin: 4vw;
 }
 
@@ -57,37 +48,25 @@
 .container-steps {
     display: flex;
     align-items: center;
-    transition: all 2s;
+    overflow: hidden;
+}
 
+.container-steps p {
+    max-width: 100%;
 }
 
 
 .steps-wrapper {
-    display: flex;
     color: white;
-    font-size: 16px;
-}
 
-
-.step {
-    display: none;
-    animation: fade-out 0.5s ease-in-out;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-
-.step.active {
-    display: flex;
-    animation: fade-in 0.5s ease-in-out;
-    opacity: 1;
 }
 
 
 .dots-group {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    width: 30%;
 
 }
 
@@ -95,53 +74,128 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 20%;
     cursor: pointer;
 }
 
-
-.dots-group .dots-squad:last-child {
-    margin-right: 0;
-}
-
-.dots {
-    width: 20px;
-    height: 20px;
+.dots-squad label {
+    height: 2vh;
+    width: 2.3vw;
     border-radius: 50%;
-    background-color: rgb(30, 221, 212);
-
-}
-
-.dots-squad:hover .dots {
-  background-color: rgb(217, 240, 12);
+    background-color: #b11b1b;
+    cursor: pointer;
+    border: 0.15rem solid white;
 }
 
 
-.dots.active {
-    border: 3px solid   rgb(30, 221, 212);
-    background-color: rgb(184, 28, 61);
+.steps-wrapper .boll {
+    opacity: 0;
+    z-index: 0;
+    display: none;
+    margin: 0;
+    font-size: 1.4rem;
+}
 
+.dots-squad:hover label,
+#img1:checked~.info>.dots-group>.dots-squad:nth-of-type(1) label,
+#img2:checked~.info>.dots-group>.dots-squad:nth-of-type(2) label,
+#img3:checked~.info>.dots-group>.dots-squad:nth-of-type(3) label,
+#img4:checked~.info>.dots-group>.dots-squad:nth-of-type(4) label,
+#img5:checked~.info>.dots-group>.dots-squad:nth-of-type(5) label {
+    background: #1bb1b1;
+}
+
+.dots-squad:active label,
+#img1:checked~.info>.dots-group>.dots-squad:nth-of-type(1) label,
+#img2:checked~.info>.dots-group>.dots-squad:nth-of-type(2) label,
+#img3:checked~.info>.dots-group>.dots-squad:nth-of-type(3) label,
+#img4:checked~.info>.dots-group>.dots-squad:nth-of-type(4) label,
+#img5:checked~.info>.dots-group>.dots-squad:nth-of-type(5) label {
+    background: #0ceec8;
 }
 
 
 
-@keyframes fade-in {
+
+#img1:checked~.image-wrapper>.image1 {
+    margin-left: 0%;
+    transition: all .5s ease;
+
+}
+
+#img2:checked~.image-wrapper>.image1 {
+    margin-left: -100%;
+    transition: all .5s ease;
+}
+
+#img3:checked~.image-wrapper>.image1 {
+    margin-left: -200%;
+    transition: all .5s ease;
+}
+
+#img4:checked~.image-wrapper>.image1 {
+    margin-left: -300%;
+    transition: all .5s ease;
+}
+
+#img5:checked~.image-wrapper>.image1 {
+    margin-left: -400%;
+    transition: all .5s ease;
+}
+
+#img1:checked~.info>.container-steps>.steps-wrapper>.step1,
+#img2:checked~.info>.container-steps>.steps-wrapper>.step2,
+#img3:checked~.info>.container-steps>.steps-wrapper>.step3,
+#img4:checked~.info>.container-steps>.steps-wrapper>.step4,
+#img5:checked~.info>.container-steps>.steps-wrapper>.step5 {
+    display: flex;
+    opacity: 1;
+    z-index: 1;
+    animation: moves 1s ease;
+}
+
+
+@keyframes moves {
     0% {
+        display: block;
         opacity: 0;
+        z-index: 0;
+        visibility: hidden;
     }
 
     100% {
+        display: flex;
         opacity: 1;
     }
 }
 
-@keyframes fade-out {
-    0% {
-        opacity: 1;
+
+
+@media (max-width: 750px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 4vw;
     }
 
-    100% {
-        opacity: 0;
+    .dots-group {
+        margin: auto;
+        order: 1;
     }
+
+    .steps-wrapper {
+        display: flex;
+        color: white;
+        font-size: 1.5vw;
+        margin-top: 4vw;
+    }
+
+    .container-steps {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        order: 2;
+    }
+
 }

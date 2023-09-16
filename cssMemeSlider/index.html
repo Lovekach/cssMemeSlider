@@ -9,54 +9,61 @@
 </head>
 
 <body>
+
+
+
     <div class="container">
-        <div class="slider">
-
-            <div class="container-images">
-                <div class="image-wrapper">
-                    <img class="image" src="./images/1.jpg" alt="images1">
-                    <img class="image" src="./images/2.jpg" alt="images2">
-                    <img class="image" src="./images/4 (1).jpg" alt="images3">
-                    <img class="image" src="./images/3.jpg" alt="images4">
-                    <img class="image" src="./images/5.jpg" alt="images5">
-                    <img class="image" src="./images/6.jpg" alt="images6">
-                </div>
-
-            </div>
+        <input type="radio" name="slide" id="img1" checked>
+        <input type="radio" name="slide" id="img2">
+        <input type="radio" name="slide" id="img3">
+        <input type="radio" name="slide" id="img4">
+        <input type="radio" name="slide" id="img5">
+        
+        <div class="image-wrapper">
+            <img class="image1" src="./images/1.jpg" alt="images1">
+            <img class="image2" src="./images/2.jpg" alt="images2">
+            <img class="image3" src="./images/3.jpg" alt="images4">
+            <img class="image4" src="./images/5.jpg" alt="images5">
+            <img class="image5" src="./images/6.jpg" alt="images6">
         </div>
+
+
+
         <div class="info">
+
 
             <div class="container-steps">
                 <div class="steps-wrapper">
-                    <h1 class="step active">Step 1</h1>
-                    <h1 class="step">Step 2</h1>
-                    <h1 class="step">Step 3</h1>
-                    <h1 class="step">Step 4</h1>
-                    <h1 class="step">Step 5</h1>
-                    <h1 class="step">Step 6</h1>
+                    <p class="boll step1">I'll show you how I created a 3D model: Step 1</p>
+                    <p class="boll step2">Step 2</p>
+                    <p class="boll step3">Step 3</p>
+                    <p class="boll step4">Step 4</p>
+                    <p class="boll step5">Step 5</p>
                 </div>
             </div>
 
+
             <div class="dots-group">
                 <div class="dots-squad">
-                    <div class="dots active"></div>
+                    <label for="img1"></label>
                 </div>
                 <div class="dots-squad">
-                    <div class="dots"></div>
+                    <label for="img2"></label>
                 </div>
                 <div class="dots-squad">
-                    <div class="dots"></div>
+                    <label for="img3"></label>
                 </div>
                 <div class="dots-squad">
-                    <div class="dots"></div>
+                    <label for="img4"></label>
                 </div>
                 <div class="dots-squad">
-                    <div class="dots"></div>
-                </div>
-                <div class="dots-squad">
-                    <div class="dots"></div>
+                    <label for="img5"></label>
                 </div>
             </div>
+
+
+
+
         </div>
 
     </div>
@@ -65,6 +72,5 @@
     </div>
     </div>
 </body>
-<script src="./index.js"></script>
 
 </html>
