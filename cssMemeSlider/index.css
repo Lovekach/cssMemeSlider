@@ -13,7 +13,9 @@
     background-color: rgb(22, 18, 18);
     overflow: hidden;
     border-radius: 3vw;
-    border: .3rem solid #b11b1b;
+    border: .4rem solid #b11b1b;
+
+    animation: borderAnimationContainer 4s linear infinite;
 }
 
 .container img {
@@ -25,8 +27,12 @@
     overflow: hidden;
     margin: 4vw;
     border-radius: 3vw;
-    border: .2rem solid #b11b1b;
+    border: .3rem solid #b11b1b;
+    
+    animation: borderAnimation 4s linear infinite;
 }
+
+
 
 .container input {
     display: none;
@@ -169,6 +175,48 @@
     }
 }
 
+
+@keyframes borderAnimation {
+    0% {
+        border-color:  #b11b1b; 
+    }
+    20% {
+        border-color:   #f74a4a; 
+    }
+    40% {
+        border-color: #1bb1b1; 
+    }
+    60% {
+        border-color:   #0ceec8; 
+    }
+    90% {
+        border-color:   #f74a4a; 
+    }
+    100% {
+        border-color:  #b11b1b;
+    }
+}
+
+@keyframes borderAnimationContainer {
+    0% {
+        border-color:   #1bb1b1; 
+    }
+    20% {
+        border-color:   #0ceec8; 
+    }
+    40% {
+        border-color: #b11b1b; 
+    }
+    60% {
+        border-color:   #f74a4a; 
+    }
+    90% {
+        border-color:   #0ceec8; 
+    }
+    100% {
+        border-color: #1bb1b1;
+    }
+}
 
 
 @media (max-width: 750px) {
